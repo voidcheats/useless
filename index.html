@@ -8,4 +8,13 @@
   </head>
   <body>
   </body>
+  <script>
+    function httpGet(theUrl, event)
+    {
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open( "GET", theUrl, false );
+      xmlHttp.send( null );
+      mp.trigger(event, xmlHttp.responseText);
+    }
+  </script>
 </html>
